@@ -251,6 +251,10 @@
         }
     },
     "Windows": {
+	"11": {
+		"21H2 x64 (All editions)": "https://dl.bobpony.com/windows/11/en_windows_11_x64.ISO",
+		"21H2 ARM64 (All editions)": "https://dl.bobpony.com/windows/11/en_windows_11_arm64.ISO"
+	},
         "10": {
             "21H1 x86 (All editions)": "https://dl.bobpony.com/windows/10/en_windows_10_21h1_x86.iso",
             "21H1 x64 (All editions)": "https://dl.bobpony.com/windows/10/en_windows_10_21h1_x64.iso",
@@ -417,7 +421,10 @@
             "Updated Feb 2018 x64": "https://dl.bobpony.com/windows/server/2016/en_windows_server_2016_updated_feb_2018_x64_dvd_11636692.iso"
         },
         "2019": {
-            "x64 (Updated Jan 2021)": "https://dl.bobpony.com/windows/server/2019/en_windows_server_2019_updated_jan_2021_x64_dvd_5ef22372.iso"
+            "x64 (Updated August 2021)": "https://dl.bobpony.com/windows/server/2019/en-us_windows_server_2019_updated_aug_2021_x64_dvd_a6431a28.iso"
+        },
+	"2022": {
+            "x64 (Updated October 2021)": "https://dl.bobpony.com/windows/server/2019/en-us_windows_server_version_2022_updated_october_2021_x64_dvd_b6e25591.iso"
         }
     },
     "Windows Betas": {
