@@ -225,6 +225,7 @@
             "SP2": "https://dl.bobpony.com/updates/Windows%20Server%202003%20and%20XP%20x64/WindowsServer2003.WindowsXP-KB914961-SP2-x64-ENU.exe"
         },
         "Windows XP x86": {
+	    "SP1a": "https://dl.bobpony.com/updates/Windows%20XP/xpsp1a_en_x86.exe",
             "SP2": "https://dl.bobpony.com/updates/Windows%20XP/xpsp2_33a8fef60d48ae1f2c4feea27111af5ceca3c4f6.exe",
             "SP3": "https://dl.bobpony.com/updates/Windows%20XP/windowsxp-kb936929-sp3-x86-enu_c81472f7eeea2eca421e116cd4c03e2300ebfde4.exe"
         },
@@ -264,7 +265,10 @@
             "LTSB 2016 x86": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_2016_ltsb_x86_dvd_9060010.iso",
             "LTSB 2016 x64": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_2016_ltsb_x64_dvd_9059483.iso",
             "LTSC 2019 x86": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_ltsc_2019_x86_dvd_892869c9.iso",
-            "LTSC 2019 x64": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_ltsc_2019_x64_dvd_5795bb03.iso"
+            "LTSC 2019 x64": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_ltsc_2019_x64_dvd_5795bb03.iso",
+	    "LTSC 2021 x86": "https://dl.bobpony.com/windows/10/en-us_windows_10_enterprise_ltsc_2021_x86_dvd_9f4aa95f.iso",
+	    "LTSC 2021 x64": "https://dl.bobpony.com/windows/10/en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96.iso",
+	    "LTSC IoT 2021 x64": "https://dl.bobpony.com/windows/10/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd_257ad90f.iso"
         },
         "8.1": {
             "x86": "https://dl.bobpony.com/windows/8.x/8.1/en_windows_8.1_with_update_x86_dvd_6051550.iso",
@@ -424,7 +428,7 @@
             "x64 (Updated August 2021)": "https://dl.bobpony.com/windows/server/2019/en-us_windows_server_2019_updated_aug_2021_x64_dvd_a6431a28.iso"
         },
 	"2022": {
-            "x64 (Updated October 2021)": "https://dl.bobpony.com/windows/server/2019/en-us_windows_server_version_2022_updated_october_2021_x64_dvd_b6e25591.iso"
+            "x64 (Updated November 2021)": "https://dl.bobpony.com/windows/server/2022/en-us_windows_server_version_2022_updated_nov_2021_x64_dvd_e9a58f14.iso"
         }
     },
     "Windows Betas": {
