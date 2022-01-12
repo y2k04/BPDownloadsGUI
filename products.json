@@ -257,9 +257,9 @@
 		"21H2 ARM64 (All editions)": "https://dl.bobpony.com/windows/11/en_windows_11_arm64.ISO"
 	},
         "10": {
-            "21H1 x86 (All editions)": "https://dl.bobpony.com/windows/10/en_windows_10_21h1_x86.iso",
-            "21H1 x64 (All editions)": "https://dl.bobpony.com/windows/10/en_windows_10_21h1_x64.iso",
-            "21H1 ARM64 (All editions)": "https://dl.bobpony.com/windows/10/en_windows_10_21h1_arm64.iso",
+            "21H2 x86 (All editions)": "https://dl.bobpony.com/windows/10/en-us_windows_10_21h2_x86.iso",
+            "21H2 x64 (All editions)": "https://dl.bobpony.com/windows/10/en-us_windows_10_21h2_x64.iso",
+            "21H2 ARM64 (All editions)": "https://dl.bobpony.com/windows/10/en-us_windows_10_21h2_arm64.iso",
             "LTSB 2015 x86": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_2015_ltsb_x86_dvd_6848454.iso",
             "LTSB 2015 x64": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_2015_ltsb_x64_dvd_6848446.iso",
             "LTSB 2016 x86": "https://dl.bobpony.com/windows/10/en_windows_10_enterprise_2016_ltsb_x86_dvd_9060010.iso",
