@@ -6,7 +6,7 @@ const downloadURL = document.querySelector("#download");
 function getData(d){return fetch(d).then(a=>a.body.getReader()).then(a=>{return new Response(new ReadableStream({start(b){let c=()=>{a.read().then(({done,value})=>{if(done)return b.close();b.enqueue(value);c()})};c()}})).text()})}
 
 async function getListing(folder = "", obj = typeObj) {
-	let links = await getData(`${debugProxy}https://dl.bobpony.com/${folder}`).then(a => {
+	let links = await getData(`https://dl.bobpony.com/${folder}`).then(a => {
 		let dir = document.createElement("div");
 		dir.innerHTML = a;
 		return dir.getElementsByTagName("a");
@@ -49,9 +49,9 @@ function updateEditions() {
 }
 
 function updateURL() {
-	if (typeObj.value && versionObj.value && editionObj.value) {
+	if (typeObj.value && versionObj.value && editionObj.value)
 		downloadURL.href = `https://dl.bobpony.com/${typeObj.value}/${versionObj.value}/${editionObj.value}`;
-	} else {
+	else {
 		downloadURL.removeAttr("href");
 		downloadURL.disabled = true;
 	}
