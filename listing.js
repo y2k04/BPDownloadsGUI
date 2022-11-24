@@ -5,8 +5,7 @@ const versionObj = document.querySelector("#version");
 const editionObj = document.querySelector("#edition");
 const downloadURL = document.querySelector("#download");
 
-function getData(d){return fetch(d).then(a=>a.body.getReader()).then(a=>{return new Response(new ReadableStream({start(b){let c=()=>{a.read().then(({done,value})=>{if(done)return b.close();b.enqueue(value);c()})};c()}})).text()})}
-
+function getData(e){return fetch(e).then(e=>e.body.getReader()).then(e=>new Response(new ReadableStream({start:function(n){let a=()=>{e.read().then(({done:e,value:t})=>e?n.close():(n.enqueue(t),void a()))};a()}})).text())}
 
 async function getListing(folder = "", obj = typeObj) {
 	let links = await getData(`${debug ? "https://api.allorigins.win/raw?url=" : ""}https://dl.bobpony.com/${folder}`).then(a => {
@@ -21,13 +20,13 @@ async function getListing(folder = "", obj = typeObj) {
 					let innerDir = await getListing(`${folder}/${links[l].innerText}`, obj);
 					for (var il = 0; il < innerDir.length; il++) {
 						if (!innerDir[il].innerText.startsWith("..") & innerDir[il].innerText != "_h5ai.header.html")
-							obj.append(new Option(innerDir[il].innerText.substring(0,innerDir[il].innerText.lastIndexOf(".")), innerDir[il].innerText));
+							obj.append(new Option(innerDir[il].innerText.substring(0, innerDir[il].innerText.lastIndexOf(".")), innerDir[il].innerText));
 					}
 				}
-				else if(links[l].innerText != "_h5ai.header.html")
-						obj.append(new Option(links[l].innerText.substring(0,links[l].innerText.lastIndexOf(".")), links[l].innerText));
+			else if (links[l].innerText != "_h5ai.header.html")
+				obj.append(new Option(links[l].innerText.substring(0, links[l].innerText.lastIndexOf(".")), links[l].innerText));
 		} else if (links[l].innerText.endsWith("/") & !links[l].innerText.startsWith(".."))
-			obj.append(new Option(links[l].innerText.replace("/",""),links[l].innerText.replace("/","")));
+			obj.append(new Option(links[l].innerText.replace("/", ""), links[l].innerText.replace("/", "")));
 	}
 }
 
@@ -47,7 +46,7 @@ function updateEditions() {
 		if (!i.disabled) i.remove();
 	}
 	document.querySelector("#edition option[value='placeholder']").selected = true;
-	getListing(typeObj.value+"/"+versionObj.value, editionObj);
+	getListing(typeObj.value + "/" + versionObj.value, editionObj);
 	updateURL();
 }
 
