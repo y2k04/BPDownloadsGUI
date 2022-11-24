@@ -1,4 +1,4 @@
-const debug = false;
+const debug = true;
 
 const typeObj = document.querySelector("#type");
 const versionObj = document.querySelector("#version");
