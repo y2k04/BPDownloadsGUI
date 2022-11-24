@@ -1,174 +1,170 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
-
-<head>
-    <title>Downloads - Bob Pony</title>
-    <meta property="og:title" content="Downloads - Bob Pony" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://downloadui.bobpony.com" />
-    <meta property="og:description" content="Download software from Bob Pony's massive software repository with ease." />
-    <meta property="theme-color" content="#85fb65" />
-    <meta charset="UTF-8" />
-    <link href="https://bobpony.com/img/favicon.png" rel="icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://bobpony.com/js/nav.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <style>
-        .dropdown-item {
-            min-width: 40vh;
-            max-width: 95vw;
-            text-align-last: center;
-            margin-bottom: 1em;
-        }
-
-        .buttom {
-            margin-bottom: 0.5em;
-        }
-    </style>
-</head>
-
-<nav class="navbar is-info" role="navigation" aria-label="main navigation">
-    <div class="container" id="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img src="https://bobpony.com/img/favicon.png" />
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a href="https://bobpony.com" class="navbar-item">
-                    <span class="icon-text">
-                        <span class="icon">
-                            <i class="fas fa-home"></i>
-                        </span>
-                        <span>Home</span>
-                    </span>
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        <span class="icon-text">
-                            <span class="icon">
-                                <i class="fas fa-download"></i>
-                            </span>
-                            <span>Downloads</span>
-                        </span>
+<html lang="en" class="has-navbar-fixed-top">
+    <head>
+        <!-- Resources -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- Compatibility -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="#6CD9FF" name="theme-color">
+        <!-- Metadata -->
+        <meta content="Download from our massive collection with ease." name="description">
+        <meta content="bp, bob, bobpony, bob pony, bpc, bobpony.org, bobpony.com" name="keywords">
+        <!-- Open Graph -->
+        <meta content="Download from our massive collection with ease." name="og:description">
+        <meta content="https://bobpony.com/img/favicon.png" property="og:image">
+        <meta content="Downloads - Bob Pony" property="og:title">
+        <meta content="website" property="og:type">
+        <meta content="https://bobpony.com/downloads/" property="og:url">
+        <!-- Twitter/Discord Metadata -->
+        <meta content="summary" name="twitter:card">
+        <meta content="Download from our massive collection with ease." name="twitter:description">
+        <meta content="https://bobpony.com/img/favicon.png" name="twitter:image">
+        <meta content="Downloads - Bob Pony" name="twitter:title">
+        <meta content="https://bobpony.com/downloads/" property="twitter:url">
+        <!-- Favicon -->
+        <link href="/img/favicon.png" rel="icon">
+        <script src="/js/nav.js"></script>
+        <title>Downloads - Bob Pony</title>
+    </head>
+    <body>
+        <nav class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="container" id="container">
+                <div class="navbar-brand">
+                    <img class="navlogo" width="50" height="50" src="/img/favicon.png">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
-                    <div class="navbar-dropdown">
-                        <a href="https://downloadui.bobpony.com" class="navbar-item is-active">Downloader UI
+                </div>
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item ">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-home"></i>
+                                </span>
+                                <span>Home</span>
+                            </span>
                         </a>
-                        <a href="https://dl.bobpony.com" class="navbar-item">
-                                Directory Listing
+                        <a href="https://blog.bobpony.com" class="navbar-item ">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-blog"></i>
+                                </span>
+                                <span>Blog</span>
+                            </span>
+                        </a>
+                        <a href="/downloads/" class="navbar-item is-active">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span>Downloads</span>
+                            </span>
+                        </a>
+                        <a href="https://video.bobpony.com" class="navbar-item">
+                            <span class="icon-text">
+                                <span class="icon">
+                                    <i class="fas fa-video"></i>
+                                </span>
+                                <span>Video Archive</span>
+                            </span>
                         </a>
                     </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        <span class="icon-text">
-                            <span class="icon">
-                                <i class="fas fa-cubes"></i>
-                            </span>
-                            <span>More</span>
-                        </span>
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a href="https://video.bobpony.com" class="navbar-item">Video Archives
+                    <div class="navbar-end">
+                        <a href="https://www.youtube.com/channel/UCAZzz2Dd9Xh6vTjNcxhqPZw" class="navbar-item" title="YouTube">
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://github.com/TheBobPony" class="navbar-item">GitHub profile
+                        <a href="https://twitter.com/TheBobPony" class="navbar-item" title="Twitter">
+                            <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://github.com/TheBobPony/bobpony.com" class="navbar-item">Source on GitHub
-                            </span>
+                        <a rel="me" href="https://mastodon.social/@bobpony" class="navbar-item" title="Mastodon">
+                            <i class="fab fa-mastodon"></i>
+                        </a>
+                        <a href="https://github.com/TheBobPony/bobpony.com" class="navbar-item" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="/contact" class="navbar-item " title="Contact">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
             </div>
+        </nav>
+        <style>
+            .dropdown-item {
+                min-width: 40vh;
+                max-width: 90vw;
+                text-align-last: center;
+                margin-bottom: 1em;
+            }
 
-            <div class="navbar-end">
-                <a href="https://www.youtube.com/channel/UCAZzz2Dd9Xh6vTjNcxhqPZw" class="navbar-item" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://twitter.com/TheBobPony" class="navbar-item" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://discord.me/bobpony" class="navbar-item" title="Discord Server">
-                    <i class="fab fa-discord"></i>
-                </a>
-                <a href="mailto:contact@bobpony.com" class="navbar-item" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            .buttom {
+                margin-bottom: 0.5em;
+            }
+        </style>
+        <section class="hero is-info is-bold">
+            <div class="hero-body container has-text-centered">
+                <p class="title">Downloads
+        </p>
             </div>
-        </div>
-    </div>
-</nav>
-
-<body>
-    <section class="section hero">
+        </section>
+        <noscript>
+            <div class="notification has-text-centered">
+                <p>
+                    <b>
+                        <i class="fa-solid fa-circle-info"></i>
+                        Seems like you don't have JavaScript enabled, some things on this website may not work correctly!
+                    </b>
+                </p>
+            </div>
+        </noscript>
         <div class="container">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <div class="columns is-desktop is-vcentered is-centered">
-                        <div class="column is-narrow">
-                            <h1 class="title">Downloads</h1>
-                            <p class="dropdown">
-                                <select class="dropdown-item" name="Product type" id="type" autocomplete="off"
-                                    onchange="updateVersions()">
-                                    <option disabled selected value="placeholder">
-                                        ---- Choose category ----
+            <br/>
+            <div class="has-text-centered">
+                <div class="columns is-desktop is-vcentered is-centered">
+                    <div class="column is-narrow">
+                        <p class="dropdown">
+                            <select class="dropdown-item" name="Product type" id="type" autocomplete="off" onchange="updateVersions()">
+                                <option disabled selected value="placeholder">---- Choose category ----
                                     </option>
-                                </select>
-                            </p>
-                            <br />
-                            <p class="dropdown">
-                                <select class="dropdown-item" name="Product version" id="version" autocomplete="off"
-                                    onchange="updateEditions()">
-                                    <option disabled selected value="placeholder">
-                                        ---- Choose version/type ----
+                            </select>
+                        </p>
+                        <br/>
+                        <p class="dropdown">
+                            <select class="dropdown-item" name="Product version" id="version" autocomplete="off" onchange="updateEditions()">
+                                <option disabled selected value="placeholder">---- Choose version/type ----
                                     </option>
-                                </select>
-                            </p>
-                            <br />
-                            <p class="dropdown">
-                                <select class="dropdown-item" name="Product edition" id="edition" autocomplete="off"
-                                    onchange="updateURL()">
-                                    <option disabled selected value="placeholder">
-                                        ---- Choose option ----
+                            </select>
+                        </p>
+                        <br/>
+                        <p class="dropdown">
+                            <select class="dropdown-item" name="Product edition" id="edition" autocomplete="off" onchange="updateURL()">
+                                <option disabled selected value="placeholder">---- Choose option ----
                                     </option>
-                                </select>
-                            </p>
-                            <br />
-                            <p class="button" id="downloadP">
-                                <a id="download">DOWNLOAD</a>
-                            </p>
-                            <p>
-                                Note: If you need to enter a password, try
-                                <span style="font-family: monospace">bigcdn</span>.
-                            </p>
-                            <p>
-                                Want to help us out with the site?
-                                <a href="https://github.com/TheBobPony/BPDownloadsGUI">Check out the repo!</a>
-                            </p>
-                            <p>
-                                Want to check out the original files?
-                                <a href="https://dl.bobpony.com">Click here to go to the Downloads
-                                    page!</a>
-                            </p>
+                            </select>
+                        </p>
+                        <br/>
+                        <p class="button is-rounded" id="downloadP">
+                            <a id="download">DOWNLOAD</a>
+                        </p>
+                        <br/>
+                        <br/>
+                        <div class="notification">
+                            <i class="fa-solid fa-circle-info"></i>
+                            If you need to enter a password, try
+                                <span style="font-family: monospace">bigcdn</span>
+                            .
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Script tags here! -->
-    <script src="./listing.js"></script>
-</body>
-
+        <!-- Script tags here! -->
+        <script src="./listing.js"></script>
+    </body>
 </html>
