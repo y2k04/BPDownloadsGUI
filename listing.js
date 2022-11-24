@@ -1,3 +1,5 @@
+const debug = false;
+
 const typeObj = document.querySelector("#type");
 const versionObj = document.querySelector("#version");
 const editionObj = document.querySelector("#edition");
@@ -5,8 +7,9 @@ const downloadURL = document.querySelector("#download");
 
 function getData(d){return fetch(d).then(a=>a.body.getReader()).then(a=>{return new Response(new ReadableStream({start(b){let c=()=>{a.read().then(({done,value})=>{if(done)return b.close();b.enqueue(value);c()})};c()}})).text()})}
 
+
 async function getListing(folder = "", obj = typeObj) {
-	let links = await getData(`https://dl.bobpony.com/${folder}`).then(a => {
+	let links = await getData(`${debug ? "https://api.allorigins.win/raw?url=" : ""}https://dl.bobpony.com/${folder}`).then(a => {
 		let dir = document.createElement("div");
 		dir.innerHTML = a;
 		return dir.getElementsByTagName("a");
