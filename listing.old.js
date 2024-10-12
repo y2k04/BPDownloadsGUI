@@ -1,3 +1,5 @@
+const debug = true;
+
 const typeObj = document.querySelector("#type");
 const versionObj = document.querySelector("#version");
 const editionObj = document.querySelector("#edition");
@@ -5,38 +7,27 @@ const downloadURL = document.querySelector("#download");
 
 function getData(e){return fetch(e).then(e=>e.body.getReader()).then(e=>new Response(new ReadableStream({start:function(n){let a=()=>{e.read().then(({done:e,value:t})=>e?n.close():(n.enqueue(t),void a()))};a()}})).text())}
 
-var entries = new Map();
-
-async function populate() {
-    let rawdata = await getData("https://api.allorigins.win/raw?url=https://dl.bobpony.com/md5.txt").then(res => {
-        var e = res.split(' ');
-        var e2 = [];
-        for (var i = 0; i < e.length; i++) {
-            if (e[i].startsWith("./"))
-                e2[e2.length] = e[i];
-        }
-        return e2;
-    });
-
-    rawdata.forEach(e => {
-        let path = e.split('/');
-        if (!entries.has(path[1]))
-            entries.set(path[1],new Map());
-        if (!entries.get(path[1]).has(path[2]))
-            entries.get(path[1]).set(path[2], []);
-        
-        var file = "";
-        for (var i = 3; i < path; i++) {
-            file += `/${path[i]}`;
-        }
-
-        var files = entries.get(path[1]).get(path[2]);
-        files[files.length] = file;
-    });
-
-    entries.keys().forEach(k => {
-        typeObj.append(new Option(k,k));
-    })
+async function getListing(folder = "", obj = typeObj) {
+	let links = await getData(`${debug ? "https://api.allorigins.win/raw?url=" : ""}https://dl.bobpony.com/${folder}`).then(a => {
+		let dir = document.createElement("div");
+		dir.innerHTML = a;
+		return dir.getElementsByTagName("a");
+	});
+	for (var l = 0; l < links.length; l++) {
+		if (obj == editionObj) {
+			if (!links[l].innerText.startsWith(".."))
+				if (links[l].innerText.endsWith("/")) {
+					let innerDir = await getListing(`${folder}/${links[l].innerText}`, obj);
+					for (var il = 0; il < innerDir.length; il++) {
+						if (!innerDir[il].innerText.startsWith("..") & innerDir[il].innerText != "_h5ai.header.html")
+							obj.append(new Option(innerDir[il].innerText.substring(0, innerDir[il].innerText.lastIndexOf(".")), innerDir[il].innerText));
+					}
+				}
+			else if (links[l].innerText != "_h5ai.header.html")
+				obj.append(new Option(links[l].innerText.substring(0, links[l].innerText.lastIndexOf(".")), links[l].innerText));
+		} else if (links[l].innerText.endsWith("/") & !links[l].innerText.startsWith(".."))
+			obj.append(new Option(links[l].innerText.replace("/", ""), links[l].innerText.replace("/", "")));
+	}
 }
 
 function updateVersions() {
@@ -67,3 +58,5 @@ function updateURL() {
 		downloadURL.disabled = true;
 	}
 }
+
+getListing();
