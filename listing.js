@@ -8,13 +8,14 @@ function getData(e){return fetch(e).then(e=>e.body.getReader()).then(e=>new Resp
 var entries = new Map();
 
 async function populate() {
-    let rawdata = await getData("https://api.allorigins.win/raw?url=https://dl.bobpony.com/md5.txt").then(res => {
-        var e = res.split('\n');
-        var e2 = [];
-        e.forEach(d => {
-            e2[e2.length] = d.split(' ')[1].replace("./","");
+    let data = await getData("https://api.allorigins.win/raw?url=https://dl.bobpony.com/md5.txt").then(res => {
+        var e = []
+        res.split('\n').forEach(d => {
+            let t = d.split('  ');
+            if (t.length == 2)
+                e[e.length] = t[1].replace("./","");
         });
-        return e2;
+        return e;
     });
 
     rawdata.forEach(e => {
