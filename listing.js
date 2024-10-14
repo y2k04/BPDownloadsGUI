@@ -18,7 +18,7 @@ async function populate() {
         return e;
     });
 
-    rawdata.forEach(e => {
+    data.forEach(e => {
         let path = e.split('/');
         if (!entries.has(path[1]))
             entries.set(path[1],new Map());
