@@ -9,12 +9,11 @@ var entries = new Map();
 
 async function populate() {
     let rawdata = await getData("https://api.allorigins.win/raw?url=https://dl.bobpony.com/md5.txt").then(res => {
-        var e = res.split(' ');
+        var e = res.split('\n');
         var e2 = [];
-        for (var i = 0; i < e.length; i++) {
-            if (e[i].startsWith("./"))
-                e2[e2.length] = e[i];
-        }
+        e.forEach(d => {
+            e2[e2.length] = d.split(' ')[1].replace("./","");
+        });
         return e2;
     });
 
